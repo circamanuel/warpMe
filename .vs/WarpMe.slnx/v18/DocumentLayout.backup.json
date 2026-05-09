@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|c:\\users\\manu_\\source\\repos\\asp.net\\warpme\\warpme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|solutionrelative:warpme\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|c:\\users\\manu_\\source\\repos\\asp.net\\warpme\\warpme\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|solutionrelative:warpme\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|c:\\users\\manu_\\source\\repos\\asp.net\\warpme\\warpme\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|solutionrelative:warpme\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|c:\\users\\manu_\\source\\repos\\asp.net\\warpme\\warpme\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|solutionrelative:warpme\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|c:\\users\\manu_\\source\\repos\\asp.net\\warpme\\warpme\\components\\pages\\admin\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|solutionrelative:warpme\\components\\pages\\admin\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|c:\\users\\manu_\\source\\repos\\asp.net\\warpme\\warpme\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|solutionrelative:warpme\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|c:\\users\\manu_\\source\\repos\\asp.net\\warpme\\warpme\\components\\pages\\admin\\editprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A915A1B1-DF66-4514-8849-BFF7CD0CC5EA}|WarpMe\\WarpMe.csproj|solutionrelative:warpme\\components\\pages\\admin\\editprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "WarpMe\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "WarpMe\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T20:04:29.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "WarpMe\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "WarpMe\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T19:40:34.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\App.razor",
+              "RelativeDocumentMoniker": "WarpMe\\Components\\App.razor",
+              "ToolTip": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\App.razor",
+              "RelativeToolTip": "WarpMe\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T19:26:31.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Program.cs",
+              "RelativeDocumentMoniker": "WarpMe\\Program.cs",
+              "ToolTip": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Program.cs",
+              "RelativeToolTip": "WarpMe\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T18:02:02.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditProfile.razor",
+              "DocumentMoniker": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\Pages\\Admin\\EditProfile.razor",
+              "RelativeDocumentMoniker": "WarpMe\\Components\\Pages\\Admin\\EditProfile.razor",
+              "ToolTip": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\Pages\\Admin\\EditProfile.razor",
+              "RelativeToolTip": "WarpMe\\Components\\Pages\\Admin\\EditProfile.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T17:35:40.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.razor",
+              "DocumentMoniker": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\Pages\\Admin\\Dashboard.razor",
+              "RelativeDocumentMoniker": "WarpMe\\Components\\Pages\\Admin\\Dashboard.razor",
+              "ToolTip": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Components\\Pages\\Admin\\Dashboard.razor",
+              "RelativeToolTip": "WarpMe\\Components\\Pages\\Admin\\Dashboard.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T17:35:22.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Services\\ProfileService.cs",
+              "RelativeDocumentMoniker": "WarpMe\\Services\\ProfileService.cs",
+              "ToolTip": "C:\\Users\\manu_\\source\\repos\\ASP.NET\\WarpMe\\WarpMe\\Services\\ProfileService.cs",
+              "RelativeToolTip": "WarpMe\\Services\\ProfileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T17:32:30.659Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
