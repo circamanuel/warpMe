@@ -2,7 +2,7 @@ wwwroot\app.css
 Components\Layout\ReconnectModal.razor.js
 C:\Users\manu_\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.5\build\..\_framework\blazor.web.js
 C:\Users\manu_\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.5\build\..\_framework\blazor.server.js
-C:\Users\manu_\source\repos\ASP.NET\WarpMe\WarpMe\wwwroot\app.css
-C:\Users\manu_\source\repos\ASP.NET\WarpMe\WarpMe\Components\Layout\ReconnectModal.razor.js
-C:\Users\manu_\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.5\_framework\blazor.web.js
 C:\Users\manu_\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.5\_framework\blazor.server.js
+C:\Users\manu_\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.5\_framework\blazor.web.js
+C:\Users\manu_\source\repos\WarpMe\WarpMe\Components\Layout\ReconnectModal.razor.js
+C:\Users\manu_\source\repos\WarpMe\WarpMe\wwwroot\app.css

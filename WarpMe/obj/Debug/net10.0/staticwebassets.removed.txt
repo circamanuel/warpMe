@@ -1,2 +1,0 @@
-C:\Users\manu_\source\repos\ASP.NET\WarpMe\WarpMe\wwwroot\app.css
-C:\Users\manu_\source\repos\ASP.NET\WarpMe\WarpMe\Components\Layout\ReconnectModal.razor.js

@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("a222b21e-310c-45af-9526-36af5ba89c81")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("WarpMe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4e7ecc389df57e040f3edb101c66fab527022f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("WarpMe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WarpMe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

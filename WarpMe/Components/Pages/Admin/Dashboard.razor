@@ -1,5 +1,98 @@
-﻿<h3>Dashboard</h3>
+﻿@page "/admin/dashboard"
+@using WarpMe.Data.Models
+@using WarpMe.Services
+@inject ProfileService ProfileService;
+@inject LinkService LinkService;
+
+<h3>Dashboard</h3>
+<p>@profile?.DisplayName</p>
+<p>@profile?.Bio</p>
+<br/>
+
+<p>Anzahl Links: @links.Count</p>
+<br/>
+
+@if (profile != null)
+{
+	<MudTextField @bind-Value="profile.DisplayName" Label="Display name" Variant="Variant.Text"></MudTextField>
+	<MudTextField @bind-Value="profile.Username" Label="Username" Variant="Variant.Text"></MudTextField>
+	<MudTextField @bind-Value="profile.Bio" Label="Bio" Variant="Variant.Text"></MudTextField>
+	<MudTextField @bind-Value="profile.ProfileImageUrl" Label="ProfileImageUrl" Variant="Variant.Text"></MudTextField>
+}
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="SaveProfile">Save</MudButton>
+
+<br/>
+
+@if (links != null)
+{
+	foreach (LinkItem link in links)
+	{
+	<MudTextField @bind-Value="link.Title" Label="Url Title"></MudTextField>
+	<MudTextField @bind-Value="link.Url" Label="Url"></MudTextField>
+	<MudTextField @bind-Value="link.Order" Label="Order"></MudTextField>
+	<MudSwitch @bind-Value="link.IsVisible" Color="Color.Primary"/>
+
+	<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="() => SaveLink(link)">Save</MudButton>
+	<MudButton OnClick="() => DeleteLink(link)" Variant="Variant.Filled" Color="Color.Secondary">Delete</MudButton>
+	<b/>
+	}
+}
+
+<br />
+
+<br/>
+<MudTextField @bind-Value="linkItem.Title" Label="Link Title"></MudTextField>
+<MudTextField @bind-Value="linkItem.Url" Label="Url"></MudTextField>
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="AddLink">Save</MudButton>
 
 @code {
+	private UserProfile? profile;
+	private LinkItem linkItem = new LinkItem();
+	private List<LinkItem> links = new List<LinkItem>();
 
+	protected override void OnInitialized()
+	{
+		profile = ProfileService.GetUserProfile(1);
+		links = LinkService.GetLinkList(1);
+
+	}
+
+	private void SaveProfile()
+	{
+		if (profile != null)
+		{
+			ProfileService.UpdateUserProfile(profile);
+			profile = ProfileService.GetUserProfile(1);
+		}
+	}
+
+	private void AddLink()
+	{
+		if (profile != null)
+		{
+			linkItem.ProfileId = 1; 
+			LinkService.AddLinkItem(linkItem);
+			links = LinkService.GetLinkList(1);
+			linkItem = new LinkItem(); // set LinkItem to null
+		}
+	}
+
+	private void SaveLink(LinkItem link)
+	{
+		if (profile != null)
+		{
+			LinkService.UpdateLinkItem(link);
+			links = LinkService.GetLinkList(1);
+		}
+	}
+
+	private void DeleteLink(LinkItem link)
+	{
+		if (profile != null)
+		{
+			LinkService.DeleteLinkItem(link);
+			links = LinkService.GetLinkList(1);
+		}
+	}
 }

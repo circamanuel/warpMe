@@ -1,5 +1,43 @@
-﻿<h3>Profile</h3>
+﻿@page "/{Username}"
+@using WarpMe.Services;
+@using WarpMe.Data.Models;
+@inject ProfileService ProfileService;
+@inject LinkService LinkService;
 
-@code {
+<MudContainer MaxWidth="MaxWidth.Small">
+	<MudStack AlignItems="AlignItems.Center">
+		<MudAvatar Style="height:150px; width:150px;">
+			<MudImage Src="" Alt="Profil Image" Elevation="25" FallbackSrc="https://image.geo.de/30141740/t/kd/v4/w1440/r0/-/01-monatsgewinner-2018-05-lars-lykke-cewe-owib-jpg--80669-.jpg" />
+		</MudAvatar>
+		@foreach (LinkItem link in links)
+		{
+			<a href="@link.Url" target="_blank">
+				<MudCard Style="width: 100%">
+					<MudCardContent Style="padding: 24px; width: 80%;">
+						<MudText>@link.Title</MudText>	
+					</MudCardContent>
+				</MudCard>
 
+			</a>
+		}
+	</MudStack>
+</MudContainer>
+<h2></h2>
+
+	@code {
+	private UserProfile? profile;
+	private List<LinkItem> links = new List<LinkItem>();
+
+	[Parameter]
+	public string Username { get; set; }
+
+	protected override void OnInitialized()
+	{
+		profile = ProfileService.GetUserByUsername(Username);
+
+		if (profile != null)
+		{
+			links = LinkService.GetLinkList(profile.Id);
+		}
+	}
 }
