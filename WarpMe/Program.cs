@@ -21,7 +21,7 @@ namespace WarpMe
             // Register Class to get DbContext with injection
             builder.Services.AddScoped<ProfileService>();
             builder.Services.AddScoped<LinkService>();
-
+            builder.Services.AddScoped<ThemeServices>();
 
             var app = builder.Build();
 
