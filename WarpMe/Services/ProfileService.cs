@@ -31,5 +31,16 @@ namespace WarpMe.Services
             _db.SaveChanges();
         }
 
+        public void DeleteUserProfile(int id)
+        {
+            var userProfile = _db.UserProfiles.FirstOrDefault(p => p.Id == id);
+            if (userProfile != null)
+            {
+                _db.UserProfiles.Remove(userProfile);
+                _db.SaveChanges();
+            }
+
+        }
+
     }
 }

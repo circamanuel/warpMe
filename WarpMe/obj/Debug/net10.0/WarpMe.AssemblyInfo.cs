@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WarpMe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1153e74ce51e773dc6e8fb743c6b83392679e007")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c4259e00233d64d336b30c2d7ccfbe54caac541")]
 [assembly: System.Reflection.AssemblyProductAttribute("WarpMe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WarpMe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

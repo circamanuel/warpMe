@@ -1,4 +1,5 @@
-﻿using WarpMe.Data;
+﻿using MudBlazor;
+using WarpMe.Data;
 using WarpMe.Data.Models;
 
 namespace WarpMe.Services
@@ -27,8 +28,13 @@ namespace WarpMe.Services
 
         public List<LinkItem> GetLinkList(int profileId)
         {
-            var links = _db.LinkItems.Where(x => x.ProfileId == profileId).ToList();
+            var links = _db.LinkItems.Where(x => x.ProfileId == profileId && x.Icon == "").ToList();
             return links;
+        }
+
+        public List<LinkItem> GetIconList(int profileId)
+        {
+            return _db.LinkItems.Where(x => x.ProfileId == profileId && x.Icon != "").ToList();
         }
 
         // Update Link
@@ -43,6 +49,21 @@ namespace WarpMe.Services
         { 
             _db.LinkItems.Remove(item);
             _db.SaveChanges();
+        }
+
+        public Dictionary<string, string> GetAllIcons()
+        {
+            var result = new Dictionary<string, string>();
+
+            // Material Icons
+            foreach (var field in typeof(Icons.Material.Filled).GetFields())
+                result[field.Name] = (string)field.GetValue(null);
+
+            // Brand Icons
+            foreach (var field in typeof(Icons.Custom.Brands).GetFields())
+                result[field.Name] = (string)field.GetValue(null);
+
+            return result;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace WarpMe
             // Register Class to get DbContext with injection
             builder.Services.AddScoped<ProfileService>();
             builder.Services.AddScoped<LinkService>();
-            builder.Services.AddScoped<ThemeServices>();
+            builder.Services.AddScoped<ThemeService>();
 
             var app = builder.Build();
 
@@ -33,11 +33,15 @@ namespace WarpMe
                 {
                     db.UserProfiles.Add(new UserProfile
                     {
-                        Id = 1,
                         Username = "admin",
                         DisplayName = "Manuel",
                         Bio = "Meine Bio",
 
+                    });
+
+                    db.ProfileThemes.Add(new ProfileTheme
+                    {
+                        ProfileId = 1
                     });
 
 
@@ -52,7 +56,6 @@ namespace WarpMe
                 {
                     db.LinkItems.Add(new LinkItem
                     {
-                        Id = 1,
                         ProfileId = 1,
                         Title = "Instagram",
                         Url = "https://www.instagram.com",

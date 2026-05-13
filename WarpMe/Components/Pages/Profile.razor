@@ -3,6 +3,7 @@
 @using WarpMe.Data.Models;
 @inject ProfileService ProfileService;
 @inject LinkService LinkService;
+@inject ThemeService ThemeService;
 
 @if(profile == null)
 {
@@ -10,20 +11,56 @@
 }
 else
 {
-<MudContainer MaxWidth="MaxWidth.Small">
-	<MudStack AlignItems="AlignItems.Center" Class="mt-8">
+<MudContainer MaxWidth="MaxWidth.Small" Style=" height: calc(100vh - 64px); display: flex; flex-direction: column;">
+	<MudPaper style="width: 100%; border: 1px solid black; border-radius: 25px 25px 0px 0px; border-bottom: none; display: flex; flex:1; flex-direction: column; overflow: auto;"> 
+
+	<!--Header-->
+	<MudContainer Style="display: flex; justify-content: space-between; margin-top: 25px;">
+		<MudIconButton Style="color: black" 
+					   Icon="@Icons.Material.Filled.CatchingPokemon" aria-label="Catching Pokemon">
+		</MudIconButton>
+
+		<MudIconButton Icon="@Icons.Material.Filled.IosShare" OnClick="@ToggleOpen" aria-label="Share" Style="color: black;"/>
+	</MudContainer>
+
+	<MudPopover Open="@_open" Fixed="true" AnchorOrigin="Origin.CenterCenter" TransformOrigin="Origin.CenterCenter" Style="border-radius: 24px; overflow: hidden;">
+		<MudPaper Height="600px" Width="500px" Style="border-radius: 25px; overflow: hidden;">
+			<div style="width: 80%; margin: 0 auto">
+				<MudStack JustifyContent="Justify.Center">
+					<p>Share Link</p>
+				</MudStack>
+			</div>
+
+		</MudPaper>
+	</MudPopover>
+
+	<!--Profile picture-->
+	<MudStack AlignItems="AlignItems.Center" Class="mt-8" style="width: 100%;">
 		<MudAvatar Style="height:100px; width:100px;">
 			<MudImage Src="" Alt="Profil Image" Elevation="25" FallbackSrc="https://image.geo.de/30141740/t/kd/v4/w1440/r0/-/01-monatsgewinner-2018-05-lars-lykke-cewe-owib-jpg--80669-.jpg" />
 		</MudAvatar>
 		<MudText Typo="Typo.h4" Style="@($"color:")">@@@profile?.Username</MudText>
 		<MudText>@profile.Bio</MudText>
+	<!--Icons-->
+		<MudStack Row="true" AlignItems="AlignItems.Center">
+			@foreach(LinkItem iconLink in iconLinks)
+				{
+					<a href="@($"{iconLink.Url}")" target="_blank">
+						<MudIconButton Icon="@iconLink.Icon" Style="color: black;" Size="Size.Medium">test</MudIconButton>
+					</a>
+				}
+		</MudStack>
 	</MudStack>
-	<MudStack AlignItems="AlignItems.Center" Class="mt-8">
+
+	<MudStack AlignItems="AlignItems.Center" Class="mt-8" Style="width: 100%;">
 		@foreach (LinkItem link in links)
 		{
-			<a href="@link.Url" target="_blank">
-				<MudCard Style="@($"width: 80vw; color:{link.AccentColor}; background: {link.BackgroundColor};")">
-					<MudCardContent Style="padding: 10px; display:flex; align-itmes:center;">
+			<a href="@link.Url" target="_blank" style="width: 80%;">
+				<!--need to add c# code in class-->
+				<MudCard Style="@($" color:{theme.ProfileButtonAccentColor}; background: {theme.ProfileButtonBackgroundColor};")" 
+						 Class="@($"{theme.ProfileButtonCorner}")" Outlined="@(true)">
+
+					<MudCardContent Style="padding: 10px; display:flex; align-items:center;">
 						<MudText Style="flex:1; text-align:center; align-self:center;">@link.Title</MudText>	
 						<MudIconButton Icon="@Icons.Material.Filled.MoreVert"/>
 					</MudCardContent>
@@ -32,14 +69,37 @@ else
 			</a>
 		}
 	</MudStack>
+	<div data-testId="profile-footer"style="margin-top: auto; text-align: center; padding: 16px;">
+		<div data-testId="footer" style="margin: 30px;">
+			<a href="https://www.vacirca.dev" target="_blank">
+				<MudButton class="mud-theme-teritary py-4 px-6 mx-4 rounded-xl" Variant="Variant.Filled">Join In WarpMe</MudButton>
+			</a>
+		</div>
+		<div style="margin:30px;">
+			<a href="/about/cookies">Cookies Preferences</a>
+			<span>•</span>
+			<a href="/about/report">Report</a>
+			<span>•</span>
+			<a href="/about/privacy">Privacy</a>
+			<span>•</span>
+			<a href="/about/explore">Explore</a>
+			<span>•</span>
+			<a href="/about/more">More from Warpme</a>
+			
+		</div>
+	</div>
+</MudPaper>
 </MudContainer>
 <h2></h2>
 
 }
 
-	@code {
+@code {
 	private UserProfile? profile;
+	private ProfileTheme? theme;
 	private List<LinkItem> links = new List<LinkItem>();
+	private List<LinkItem> iconLinks = new List<LinkItem>();
+	private bool _open;
 
 	[Parameter]
 	public string Username { get; set; }
@@ -51,6 +111,10 @@ else
 		if (profile != null)
 		{
 			links = LinkService.GetLinkList(profile.Id);
+			theme = ThemeService.GetProfileTheme(profile.Id);
+			iconLinks = LinkService.GetIconList(profile.Id);
 		}
 	}
+
+	private void ToggleOpen() => _open = !_open;
 }

@@ -43,31 +43,20 @@
 <br/>
 <MudTextField @bind-Value="linkItem.Title" Label="Link Title"></MudTextField>
 <MudTextField @bind-Value="linkItem.Url" Label="Url"></MudTextField>
-
-<MudSelect @bind-Value="linkItem.Icon" Label="Icon">
-	@foreach (var icon in icons)
-	{
-		<MudSelectItem Value="@icon.Value">
-			<MudIcon Icon="@icon.Value"/> @icon.Key
-		</MudSelectItem>
-	}
-	</MudSelect>
-
+<
 
 <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="AddLink">Save</MudButton>
 
-	@code {
+@code {
 	private UserProfile? profile;
 	private LinkItem linkItem = new LinkItem();
 	private List<LinkItem> links = new List<LinkItem>();
-	private Dictionary<string, string> icons = new Dictionary<string, string>();
 
 
 	protected override void OnInitialized()
 	{
 		profile = ProfileService.GetUserProfile(1);
 		links = LinkService.GetLinkList(1);
-		icons = LinkService.GetAllIcons();
 
 	}
 
@@ -109,4 +98,7 @@
 		}
 	}
 
+	var icons = typeof(Icons.Custom.Brands)
+					.GetFields()
+					.ToDictionary(f => f.Name, f => (string)f.GetValue(null));
 }

@@ -8,6 +8,7 @@ namespace WarpMe.Data
         // Database Tables
         public DbSet<LinkItem> LinkItems { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<ProfileTheme> ProfileThemes { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

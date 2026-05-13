@@ -3,7 +3,7 @@
     public class ProfileTheme
     {
         public int Id { get; set; } 
-        public int ProfilId { get; set; }
+        public int ProfileId { get; set; }
         public string ProfileWallpaper { get; set; } = string.Empty;
         public string ProfileNameColor { get; set; } = string.Empty;
         public string ProfileFontFamily { get; set ; } = string.Empty; 
